@@ -1,0 +1,58 @@
+body {
+  color: #2f80ed;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.boxes {
+  margin: 110px 380px 10px;
+  width: 520px;
+}
+
+.error {
+  width: 420px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 430px;
+  font-size: 121px;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+}
+
+[data-tooltip] {
+  position: relative; /* Относительное позиционирование */ 
+}
+
+[data-tooltip]::after {
+  font-size: 16px;
+  content: attr(data-tooltip); /* Выводим текст */
+  position: absolute; /* Абсолютное позиционирование */
+  width: 420px; /* Ширина подсказки */
+  left: 0; top: 0; /* Положение подсказки */
+  background: #FFF; /* Белый цвет фона */
+  color: #2f80ed; /* Цвет текста */
+  pointer-events: none; /* Подсказка */
+  opacity: 0; /* Подсказка невидима */
+  transition: 1s; /* Время появления подсказки */
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1; /* Показываем подсказку */
+  top: 162px; /* Положение подсказки */
+}
+
+.footer {
+  width: 420px;
+  padding-top: 280px;
+  padding-bottom: 30px;
+  padding-left: 430px;
+  margin: 0;
+  text-align: center;
+}
+
+.main_link {
+  color: #2f80ed;
+}
